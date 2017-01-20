@@ -33,11 +33,11 @@ $(function(){
 		}]);
 	});
 });
-
+/*
 $(function(){
 	moment.locale(window.navigator.userLanguage || window.navigator.language);
 	//alert(moment().format('LLLL'));
-});
+});*/
 
 /*
 end .fecss document-ready

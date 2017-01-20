@@ -258,6 +258,28 @@ ul{
 		}
 	}
 }*/
+.icon-svg-block{
+	width: 90px;
+	height: 90px;
+	padding: 20px;
+	border-radius: 50%;
+	background: fadeout(red, 0%);
+	transition: @transition-site;
+	text-align: center;
+	box-shadow: 4px 4px 7px 0px black;
+	transform-origin: center;
+	.icon-svg{
+		width: 50px;
+		height: 50px;
+		fill: white;
+	}
+	&:hover{
+		transform: scale(0.989);
+		background: fadeout(red, 10%);
+		box-shadow: 2px 2px 2px 0px black;
+		.icon-svg{fill: darken(white, 5%);}
+	}
+}
 .icon-svg{
 	transition: @transition-site;
 	fill: blue;
