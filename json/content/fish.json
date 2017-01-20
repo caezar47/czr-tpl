@@ -1,0 +1,30 @@
+{
+	"contacts":{
+		"name":"#",
+		"email":"#",
+		"phone":"#",
+		"phone_tel":"#",
+		"address":"#"
+	},
+	"soc":{
+		"vk":"#",
+		"vk_name":"#",
+		"fb":"#",
+		"fb_name":"#",
+		"pint":"#",
+		"pint_name":"#",
+		"inst":"#",
+		"inst_name":"#" 
+	},
+	"app-name":"czr-tpl",
+	"url-path-css":"/wp-content/themes/azbnbasetheme/css",
+	"url-path-css":"/css",
+	"url-path-js":"/wp-content/themes/azbnbasetheme/js",
+	"url-path-js":"/js",
+	"url-path-img":"/wp-content/themes/azbnbasetheme/img",
+	"url-path-img":"/img",
+	"url-path-favicon":"/wp-content/themes/azbnbasetheme/favicon",
+	"url-path-favicon":"/favicon",
+	"url-path-plugins":"/wp-content/themes/azbnbasetheme/plugins",
+	"url-path-plugins":"/plugins"
+}
