@@ -17,7 +17,7 @@ $(function(){
 	if (userAgent.indexOf('yabrowser') != -1) res = 'yabrowser';
 	
 	$('html').eq(0).addClass(res);
-});
+}); 
 
 $(function(){
 	$(document.body).on('keydown', function(event){
@@ -33,11 +33,11 @@ $(function(){
 		}]);
 	});
 });
-/*
+
 $(function(){
-	moment.locale(window.navigator.userLanguage || window.navigator.language);
+	//moment.locale(window.navigator.userLanguage || window.navigator.language);
 	//alert(moment().format('LLLL'));
-});*/
+});
 
 /*
 end .fecss document-ready

@@ -1,54 +1,98 @@
-.footer-site{
-	position: relative;
-	z-index: 5;
-	padding: 45px 0 35px;
-	color: @b-footer-color;
-	font-size: @b-fs - 4px; //12
-	line-height: @b-lh - 6px; //18
-	font-family: @museo-sans-light;
-	background-color: @b-footer-bg;	
-	background-image: url("@{url-path-img}/bg/bg-footer.png");
-	background-repeat: repeat;
-	background-position: center;
-	//opacity: @opacity;
-	a{
-		&, &:hover, &:focus{color: @b-footer-color;} 
+.footer__{
+	&block{
+		position: relative;
+		z-index: 4;
+		font-family: @footer-ff;
+		font-size: @footer-fs - 4px; //14
+		line-height: @footer-lh - 6px; //22 
+		font-weight: 300;
+		color: @footer-color;	
+		background-color: @footer-bg;
+		padding: 15px 0;
+		overflow: hidden;
+		@media @media-size-xs-p{text-align: center;}
 	}
-	@media @media-size-mdl{
-		padding: 35px 0 25px;
+	&container{}
+	&row{
+		justify-content: space-between;
+		align-items: center;
+		margin-top: -15px;
+		@media @media-device{flex-wrap: wrap;}
 	}
-	@media @media-size-xs{
-		text-align: center;
-		padding: 35px 0 15px;
+	&cols{
+		padding-top: 15px;
+		&.is--copyright{
+			@media @media-size-xs-p {.makeCols(5, 12);}
+			@media @media-size-xs-l {.makeCols(4, 12);}
+			@media @media-size-sm {.makeCols(2, 12);}
+			@media @media-screen {.makeCols(3, 12);}
+			@media @media-size-md {width: 21%;}
+		}
+		&.is--soc{
+			@media @media-size-xs-p {.makeCols(7, 12);}
+			@media @media-size-xs-l {.makeCols(4, 12);}
+			@media @media-screen {.makeCols(6, 12);}
+			@media @media-size-sm {.makeCols(3, 12);}
+			.social__block{
+				margin: 0 auto;
+				max-width: 590px;
+			}
+			.social__row{
+				justify-content: space-between;
+				@media @media-size-xs-p {justify-content: flex-end;}
+			}
+			@media @media-size-md {width: 58%;}
+		}
+		&.is--dorohovdesign{
+			@media @media-size-xs-p {.makeCols(12, 12);}
+			@media @media-size-xs-l {.makeCols(4, 12);}
+			@media @media-size-sm {.makeCols(2, 12);}
+			@media @media-screen {.makeCols(3, 12);}
+			@media @media-size-md {width: 21%;}
+		}
 	}
-	&.include-navbar-blog{
-		@media @media-size-xs{padding-right: 40px;}
-		@media @media-size-sm{padding-right: 60px;}
+	&logotip{
+		width: 100%;
+		max-width: 105px;
+		height: 105px;
+		display: block;
 	}
-	&.include-navbar-services{
-		@media @media-size-xs{padding-left: 40px;}
-		@media @media-size-sm{padding-left: 60px;}
+	&dorohovdesign-row{
+		align-items: center;
+		margin-left: -5px;
+		margin-right: -5px;
+		justify-content: flex-end;
+		@media @media-size-xs-p {justify-content: center;}
 	}
-}
-._fs__row{
-	align-items: center;
-	justify-content: space-between;	
-	> .cols{		
-		@media @media-size-xs{width: 100%; margin-bottom: 20px;}
+	&dorohovdesign-cols{
+		padding-left: 5px;
+		padding-right: 5px;
+		&.is--text{
+			text-align: right;
+		}
 	}
-}
-._fs__copyright-cols{}
-._fs__copyright__logo{
-	padding-top: 10px;
-	@media @media-size-xs{width: 105px; margin: 0 auto}
-	img{
-		width: 105px;
+	&dorohovdesign-text{
+		font-size: @b-fs - 10px;
+		line-height: @b-lh - 12px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-left: auto;
+		max-width: 70px;
+	}		
+	&dorohovdesign-logotip{		
+		border: none;
+		display: block;
+		width: 75px;
+		height: 25px;
+		margin:0 auto;
+		color: @footer-color;
+		@media @media-size-xs {margin: 0 0 0 auto}
+		@media @media-device-xl {
+			width: 90px;
+			height: 30px;
+		}
+		&:hover{
+			color: @footer-color-hover;
+		}	
 	}
-}
-._fs__soc{
-	text-align: center;
-}
-._fs__dorohovdesign__logo{
-	padding-top: 10px;
-	@media @media-size-xs{width: 112px; margin: 0 auto}
 }

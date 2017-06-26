@@ -1,9 +1,13 @@
-@icon: 				Flaticon;
-.include-custom-font(@family: @din, @weight: normal, @style: normal){
+.include-custom-font(
+	@family: @stem, 
+	@src-name: @stem, 
+	@weight: normal, 
+	@style: normal
+	){
 	@font-face{			
 		font-family: "@{family}";			
-		src:	url('@{url-path-fonts}/@{family}.woff2') format('woff2'),
-				url('@{url-path-fonts}/@{family}.woff') format('woff');
+		src:	url('@{url-path-fonts}/@{src-name}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{src-name}.woff') format('woff');
 		font-weight: @weight;
 		font-style: @style;		
 	}
@@ -16,26 +20,22 @@
 		font-style: @style;		
 	}
 }
-//.include-custom-font(@family: @din, 		@weight: normal, @style: normal);
-.include-custom-icon(@family: @icon, 			@weight: normal, @style: normal);
 
-@icon-ar-down: 		"\f100";
-@icon-ar-next: 		"\f101";
-@icon-ar-prev: 		"\f102";
-@icon-ar-up: 		"\f103";
-@icon-arrow-down: 	"\f104";
-@icon-arrow-next: 	"\f105";
-@icon-arrow-prev: 	"\f106";
-@icon-arrow-up: 	"\f107";
-@icon-circle: 		"\f108";
-@icon-close: 		"\f109";
-@icon-connection: 	"\f10a";
-@icon-doc: 			"\f10b";
-@icon-jpg: 			"\f10c";
-@icon-mailto: 		"\f10d";
-@icon-pdf: 			"\f10e";
-@icon-ppt: 			"\f10f";
-@icon-technology: 	"\f110";
-@icon-txt: 			"\f111";
-@icon-xls: 			"\f112";
-@icon-zip: 			"\f113";
+.include-custom-font(
+	@family: @stem,
+	@src-name: @stem,
+	@weight: 400, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @stem,
+	@src-name: @stem-med,
+	@weight: 500, 
+	@style: normal
+	);
+.include-custom-font(
+	@family: @stem,
+	@src-name: @stem-bold,
+	@weight: 700, 
+	@style: normal
+	);
